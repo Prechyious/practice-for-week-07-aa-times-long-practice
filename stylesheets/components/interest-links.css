@@ -1,0 +1,92 @@
+/* Your code here */
+.interests-bar {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 2fr 1fr 0.75fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "dog story1 cat story2 plug story3 stocks weather-img weather";
+    padding: 0 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.interests-bar__story-title {
+    font-weight: bold;
+    display: grid;
+    align-items: center;
+    row-gap: 5px;
+    margin: 10px 0;
+    border-right: 1px solid #e2e2e2;
+}
+
+.interests-bar__story-title:first-child(2) {
+    grid-area: story1;
+}
+
+.interests-bar__story-title:nth-child(1) {
+    grid-area: story2;
+}
+
+.interests-bar__story-title:last-child(3) {
+    grid-area: story3;
+}
+
+.interests-bar__story {
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+.interest-bar__stock-quotes,
+.interests-bar__images,
+.interests-bar__weather {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.interests-bar__images {
+    position: relative;
+    left: 20px;
+}
+
+.interests-bar__images.image1 {
+    grid-area: dog;
+}
+
+.interests-bar__images.image2 {
+    grid-area: cat;
+}
+
+.interests-bar__images.image3 {
+    grid-area: plug;
+}
+
+.interest-bar__stock-quotes {
+    grid-area: stocks;
+    font-weight: normal;
+}
+
+.interest-bar__stock-quotes span {
+    padding-left: 40px;
+    color: green;
+}
+
+.interests-bar__images.image4 {
+    grid-area: weather-img;
+}
+
+.interests-bar__weather {
+    grid-area: weather;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.interests-bar__images {
+    width: 60px;
+}
+
+.stocks {
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e2e2e2;
+
+}

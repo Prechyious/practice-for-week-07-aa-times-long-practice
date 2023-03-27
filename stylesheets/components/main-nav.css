@@ -1,0 +1,16 @@
+/* Your code here */
+.main {
+    margin: 0 auto;
+}
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    line-height: 12px;
+    margin: 10px;
+}
+
+.main-nav li {
+    padding: 0 8px;
+}

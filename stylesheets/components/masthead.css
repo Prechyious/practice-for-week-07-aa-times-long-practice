@@ -1,0 +1,92 @@
+/* Your code here */
+.masthead {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: auto;
+    grid-template-areas:
+        "first . second"
+        ". mid ."
+        "first-bottom mid-bottom last-bottom";
+}
+
+.item-1 {
+    grid-area: first;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.item-2 {
+    grid-area: second;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.item-3 {
+    grid-area: mid;
+    display: flex;
+    justify-content: center;
+}
+
+.item-4 {
+    grid-area: first-bottom;
+    line-height: 11px;
+    display: flex;
+    align-items: flex-end;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 11px;
+}
+
+.logo {
+    grid-area: mid-bottom;
+    text-align: center;
+    padding-top: 11px;
+    border-bottom: 1px solid #e2e2e2;
+    border-top: 1px solid #e2e2e2;
+}
+
+.item-6 {
+    grid-area: last-bottom;
+    line-height: 11px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 11px;
+}
+
+.top-nav-btn {
+    cursor: pointer;
+    font-size: 11px;
+    padding: 7px 9px;
+}
+
+.top-nav-btn:hover {
+    background-color: #e2e6e6;
+}
+
+.submit-btn {
+    padding: 5px 0;
+}
+
+.item-3 div {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    border-top: 1px solid #e2e2e2;
+    border-left: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
+    position: relative;
+    top: 1px;
+    background-color: white;
+}
+
+.tech-stack {
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #6f6f6f;
+    margin: 0 10px;
+}

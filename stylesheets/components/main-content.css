@@ -1,0 +1,205 @@
+/* Your code here */
+main {
+    display: grid;
+    grid-template-columns: 3fr 1.5fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header article4"
+        "article1 article-video article4"
+        "article1 article-video article5"
+        "article2 article3 article5"
+        "article2 article3 others"
+        ". . others"
+        ". . .";
+        padding: 10px 30px;
+}
+
+.article {
+    padding: 10px;
+}
+
+.article > p {
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+.article__comments {
+    color: #6288a5;
+}
+
+.article1 ul li {
+    margin: 5px 20px;
+    font-size: 16px;
+    line-height: 1.2em;
+    padding: 5px 0;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.article__byline {
+    font-size: 14px;
+    color: #6f6f6f;
+    padding: 10px 0;
+}
+
+.article__author {
+    font-size: 14px;
+    color: #6f6f6f;
+    padding: 5px 0;
+}
+
+.article1 ul {
+    list-style: disc;
+}
+
+.article__header {
+    padding: 0;
+}
+
+.article__main-title {
+    grid-area: header;
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: -10px;
+}
+
+.article1 {
+    grid-area: article1;
+    padding-top: 20px;
+}
+
+.article-video {
+    grid-area: article-video;
+    padding-top: 0;
+}
+
+.article-video p {
+    position: relative;
+    bottom: 20px;
+}
+
+.article2 {
+    grid-area: article2;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    margin-right: 60px;
+    margin-bottom: 30px;
+}
+
+.article3 {
+    grid-area: article3;
+    border-left: 1px solid #e2e2e2;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    margin-left: -60px;
+    margin-bottom: 30px;
+}
+
+.article4 {
+    grid-area: article4;
+    border-left: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.article5 {
+    grid-area: article5;
+    border-left: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 30px;
+}
+
+.article5 .article__header h1 {
+    padding: 10px 0;
+}
+
+.article5 .article__header .article__title {
+    font-weight: 400;
+}
+
+.article5 p {
+    padding-top: 10px;
+}
+
+.article4 .article__comments,
+.article5 .article__comments {
+    position: relative;
+    top: 40px;
+}
+
+.other_articles {
+    grid-area: others;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: -30px;
+}
+
+.other_articles .left {
+    border-left: 1px solid #e2e2e2;
+    padding: 0 4px;
+}
+
+.left article,
+.right article {
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 2px;
+}
+
+.right article {
+    align-items: center;
+    margin: 5px auto;
+}
+
+.left article:last-child {
+    border-bottom: none;
+}
+
+.other_articles .right {
+    border-left: 1px solid #e2e2e2;
+    padding: 5px;
+}
+
+.other_articles p {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .article2 {
+        margin-right: 60px;
+    }
+
+    .article3 {
+        margin-left: -60px;
+    }
+
+
+
+    .article-video iframe {
+        width: 460px;
+    }
+    .article-video p {
+        position: relative;
+        top: 0;
+    }
+
+    .article4,
+    .article5,
+    .other_articles {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .interests-bar {
+        display: none;
+    }
+}
