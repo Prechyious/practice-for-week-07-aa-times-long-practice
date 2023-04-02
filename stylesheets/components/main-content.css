@@ -225,12 +225,34 @@ h1 {
         margin: unset;
     }
 
+    .article-video {
+        display: flex;
+        flex-direction: column;
+    }
+    .article-video iframe {
+        width: 360px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .article-video p {
+        margin: 0 auto;
+        font-size: 12px;
+        margin-top: -20px;
+    }
+
     .article2 {
         margin-top: 20px;
     }
 
     .article3 {
         border-top: none;
-        border-bottom: none;
+        border-left: none;
+    }
+
+    .article__comments {
+        position: relative;
+        left: 5px;
     }
 }
