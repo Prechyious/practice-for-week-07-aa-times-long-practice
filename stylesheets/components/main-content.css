@@ -199,7 +199,38 @@ h1 {
 }
 
 @media screen and (max-width: 1000px) {
-    .interests-bar {
+    .interests-bar,
+    .main {
         display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .interests-bar,
+    .main {
+        display: none;
+    }
+
+    main {
+        display: block;
+    }
+
+    .article__main-title {
+        position: relative;
+        font-size: 19px;
+    }
+
+    .article2,
+    .article3 {
+        margin: unset;
+    }
+
+    .article2 {
+        margin-top: 20px;
+    }
+
+    .article3 {
+        border-top: none;
+        border-bottom: none;
     }
 }
